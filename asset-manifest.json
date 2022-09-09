@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/P12_Victor_Lenain/static/css/main.69f33122.css",
+    "main.js": "/P12_Victor_Lenain/static/js/main.90b44fc0.js",
+    "static/media/logo.svg": "/P12_Victor_Lenain/static/media/logo.837414860efdf652f26ae7be654e06c5.svg",
+    "static/media/apple_icon.svg": "/P12_Victor_Lenain/static/media/apple_icon.95581ba1b204199334e122af4784ab16.svg",
+    "static/media/chicken_icon.svg": "/P12_Victor_Lenain/static/media/chicken_icon.ffbc3b88a759c706993bb26fbd66113b.svg",
+    "static/media/cheeseburger_icon.svg": "/P12_Victor_Lenain/static/media/cheeseburger_icon.18f60e0efe37e86bcac036d673f0bab0.svg",
+    "static/media/fire_icon.svg": "/P12_Victor_Lenain/static/media/fire_icon.25fef86ed5860200bdf90f9cd185e1e3.svg",
+    "index.html": "/P12_Victor_Lenain/index.html",
+    "main.69f33122.css.map": "/P12_Victor_Lenain/static/css/main.69f33122.css.map",
+    "main.90b44fc0.js.map": "/P12_Victor_Lenain/static/js/main.90b44fc0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.69f33122.css",
+    "static/js/main.90b44fc0.js"
+  ]
+}
