@@ -1,10 +1,9 @@
 import useSWR from 'swr'
-
 import axios from 'axios'
 
-const fetcher = url => axios.get(url).then(res => res.data.data)
+const fetcher = (url: string) => axios.get(url).then(res => res.data.data)
 
-export function useUser(id) {
+export function getUser(id: number) {
   const { data } = useSWR(`http://localhost:3000/user/${id}`, fetcher)
 
   return {
@@ -12,7 +11,7 @@ export function useUser(id) {
   }
 }
 
-export function useUserAverageSessions(id) {
+export function getUserAverageSessions(id: number) {
   const { data } = useSWR(`http://localhost:3000/user/${id}/average-sessions`, fetcher)
 
   return {
@@ -20,7 +19,7 @@ export function useUserAverageSessions(id) {
   }
 }
 
-export function useUserActivity(id) {
+export function getUserActivity(id: number) {
   const { data } = useSWR(`http://localhost:3000/user/${id}/activity`, fetcher)
 
   return {
@@ -28,7 +27,7 @@ export function useUserActivity(id) {
   }
 }
 
-export function useUserPerformance(id) {
+export function getUserPerformance(id: number) {
   const { data } = useSWR(`http://localhost:3000/user/${id}/performance`, fetcher)
 
   return {
