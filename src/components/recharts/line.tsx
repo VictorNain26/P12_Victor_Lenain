@@ -23,15 +23,17 @@ export const DisplayLine = ({ averageSessions }: { averageSessions: AverageSessi
     }
   })
 
-  const TooltipStyle = ({ payload }: { payload: AverageSessions[] }) => {
+  const TooltipStyle = ({ data }: { data: AverageSessions[] }) => {
+    console.log(data);
 
-    if (payload && payload.length) {
+    if (data && data.length) {
       return (
-        <div className="bg-white py-3 px-1 text-black font-bold">
-          <p>{payload[0].sessionLength} min</p>
+        <div className="flex items-center bg-white py-3 px-1 text-black text-xs font-medium border-0">
+          <p>{data[0].sessionLength} min</p>
         </div>
       );
     }
+
     return null;
   };
 
@@ -41,14 +43,13 @@ export const DisplayLine = ({ averageSessions }: { averageSessions: AverageSessi
       <span className="absolute text-white opacity-50 text-base mt-14 ml-8">sessions</span>
 
       <LineChart
-
         width={258}
         height={263}
         data={ data }
         margin={{ top: 100, bottom: 10 }}
       >
         <XAxis dataKey="subject" tickLine={false} axisLine={false} padding={{ left: 20, right: 20 }} stroke="white" />
-        <Tooltip content={<TooltipStyle payload={averageSessions} />} />
+        <Tooltip content={<TooltipStyle data={averageSessions} />} />
         <Line type="monotone" dataKey="value" stroke="white" dot={false} />
       </LineChart>
     </div>
